@@ -345,7 +345,9 @@ class QuizGame: UIViewController, MCSessionDelegate {
     @IBAction func restartAction(_ sender: Any) {
         submitted = 0
         ended = 0
-        ready = 0
+        if(quizNumber != 0) {
+            ready = 0
+        }
         restartQuizButton.isHidden = true
         currentQuestion = 0
         quizNumber += 1
